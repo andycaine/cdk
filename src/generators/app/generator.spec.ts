@@ -6,7 +6,7 @@ import { AppGeneratorSchema } from './schema';
 
 describe('app generator', () => {
   let tree: Tree;
-  const options: AppGeneratorSchema = { name: 'test' };
+  const options: AppGeneratorSchema = { name: 'test', stack: 'MyTestStack' };
 
   beforeEach(() => {
     tree = createTreeWithEmptyWorkspace();

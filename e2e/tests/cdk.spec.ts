@@ -2,7 +2,7 @@ import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { mkdirSync, rmSync } from 'fs';
 
-describe('cdk-plugin', () => {
+describe('cdk', () => {
   let projectDirectory: string;
 
   beforeAll(() => {
@@ -10,7 +10,7 @@ describe('cdk-plugin', () => {
 
     // The plugin has been built and published to a local registry in the jest globalSetup
     // Install the plugin built with the latest source code into the test repo
-    execSync(`npm install cdk-plugin@e2e`, {
+    execSync(`npm install @andycaine/cdk@e2e`, {
       cwd: projectDirectory,
       stdio: 'inherit',
       env: process.env,
@@ -27,7 +27,7 @@ describe('cdk-plugin', () => {
 
   it('should be installed', () => {
     // npm ls will fail if the package is not installed properly
-    execSync('npm ls cdk-plugin', {
+    execSync('npm ls @andycaine/cdk', {
       cwd: projectDirectory,
       stdio: 'inherit',
     });

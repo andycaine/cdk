@@ -7,7 +7,7 @@ import { execFileSync } from 'child_process';
 
 export default async () => {
   // local registry target to run
-  const localRegistryTarget = 'cdk-plugin:local-registry';
+  const localRegistryTarget = 'cdk:local-registry';
   // storage folder for the local registry
   const storage = './tmp/local-registry/storage';
 
